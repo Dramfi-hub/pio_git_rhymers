@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[12];
 
-    public int currentIndex = -1;
+    private int total = -1;
 
     public void countIn(int in) {
         if (!isFull())
@@ -29,6 +29,12 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return -1;
         return numbers[currentIndex--];
+    }
+    public int getTotal() {
+        return total;  
+    }
+    public void setTotal(int total) {
+        this.total = total;
     }
 
 }
